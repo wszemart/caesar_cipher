@@ -47,11 +47,3 @@ class Cipher:
                 else:
                     encrypted_text += char
             return encrypted_text
-
-
-test = Cipher()
-tekst = "Marta jest chora"
-print(test.encrypt(tekst, "rot13"))
-print(test.decrypt('Zn!#n wr"# pu|!n', "rot13"))
-print(test.encrypt(tekst, "rot47"))
-print(test.decrypt("|2CE2 ;6DE 49@C2", "rot47"))
