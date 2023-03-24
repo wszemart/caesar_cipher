@@ -1,8 +1,9 @@
 from cipher import Cipher
 from file_handler import FileHandler
+from menu import Menu
 
 
-class Menu:
+class Manager:
     def __init__(self):
         self.ceasar_cipher = Cipher()
         self.file_handler = FileHandler()
@@ -15,20 +16,6 @@ class Menu:
             5: self.exit_program
         }
 
-    def show_menu(self):
-        choice = int(
-            input(
-                """Choose any option:
-            1. Encrypt text
-            2. Decrypt text
-            3. Write to file
-            4. Read file
-            5. Exit
-        """
-            )
-        )
-        self.execute(choice)
-
     def show_error(self):
         print("Error!")
 
@@ -40,5 +27,10 @@ class Menu:
         self.__is_running = False
 
 
-menu = Menu()
-menu.show_menu()
+def main():
+    menu = Menu()
+    menu.show_menu()
+
+
+if __name__ == '__main__':
+    main()
