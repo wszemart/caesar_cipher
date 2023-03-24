@@ -1,22 +1,20 @@
-from manager import Manager
-
-""" class to show menu """
+""" class to show menu and get choice from user """
 
 
 class Menu:
-    def __init__(self):
-        self.execute = Manager()
-
-    def show_menu(self):
-        choice = int(
-            input(
+    @staticmethod
+    def show_menu():
+        print(
                 """Choose any option:
             1. Encrypt text
             2. Decrypt text
             3. Write to file
-            4. Read file
+            4. Read from file
             5. Exit
         """
             )
-        )
-        self.execute.execute(choice)
+
+    @staticmethod
+    def get_choice():
+        choice = int(input())
+        return choice
