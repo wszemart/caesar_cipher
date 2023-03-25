@@ -4,7 +4,7 @@ from program_manager import *
 def main():
     manager = Manager()
     manager.start()
-    manager.execute()
+    manager.run()
 
 
 if __name__ == "__main__":
