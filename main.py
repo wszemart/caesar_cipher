@@ -3,7 +3,6 @@ from program_manager import *
 
 def main():
     manager = Manager()
-    manager.start()
     manager.run()
 
 
