@@ -1,13 +1,12 @@
+from typing import Union, List, Dict
 import json
-
-""" class to file handling """
 
 
 class FileHandler:
     @staticmethod
-    def read_file(filename):
+    def read_file(filename) -> Union[List, Dict]:
         try:
-            with open(filename, "r") as file:
+            with open(f"files/{filename}.json", "r") as file:
                 data = json.load(file)
                 return data
         except FileNotFoundError:
@@ -15,11 +14,12 @@ class FileHandler:
             return []
 
     @staticmethod
-    def write_file(filename: str, data, mode="w"):
+    def write_file(filename: str, data) -> None:
+        mode = input("Choose mode to write file (w/a): ")
         if mode == "a":
             current_data = FileHandler.read_file(filename)
-            current_data.update(data)
+            current_data.append(data)
             data = current_data
 
-        with open(filename, mode) as file:
+        with open(f"files/{filename}.json", mode) as file:
             json.dump(data, file, indent=2)
