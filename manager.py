@@ -10,7 +10,12 @@ class Manager:
     def get_input() -> Tuple[str, str]:
         text = input("Enter text: ")
         rot_type = input("Enter ROT type (rot13/rot47): ")
-        return text, rot_type
+        rot_types = ['rot13', 'rot47']
+        if rot_type not in rot_types:
+            print("Invalid rot type. Please try again.")
+            return Manager.get_input()
+        else:
+            return text, rot_type
 
     @staticmethod
     def encrypt_text():
