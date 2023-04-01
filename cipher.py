@@ -1,8 +1,6 @@
 from typing import Union, Optional
 from abc import ABC, abstractmethod
 
-""" class to encrypt and decrypt text on dependency to choose ROT13/ROT47 """
-
 
 class Rot(ABC):
     ROT13 = "rot13"
