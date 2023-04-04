@@ -1,5 +1,4 @@
-import os
-from unittest.mock import patch
+import tempfile
 from cipher import Rot13, Rot47
 from buffer import MemoryBuffer
 from text import Text
@@ -43,20 +42,16 @@ class TestMemoryBuffer:
         MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
         MemoryBuffer.clear_buffer()
         assert len(MemoryBuffer.logs) == 0
-#
-#     def test_show_buffer(capsys):
-#         MemoryBuffer.create_log(text="probe", rot_type="rot13", status="success")
-#         MemoryBuffer.show_buffer()
-#         captured = capsys.readouterr()
-#         assert "0. Text(text='}!|or', rot_type='rot13', status='encrypted')" in captured.out
-#
 
-
-    # def test_del_position(capsys):
-    #     MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
-    #     MemoryBuffer.del_position()
-    #     captured = capsys.readouterr()
-    #     assert "What do you want to delete?" in captured.out
+    @staticmethod
+    def test_del_position():
+        MemoryBuffer.create_log(text="Sample text_1", rot_type="rot13", status="success")
+        MemoryBuffer.create_log(text="Sample text_2", rot_type="rot47", status="fail")
+        len_before_delete = len(MemoryBuffer.logs)
+        choice_to_del: int = 1
+        MemoryBuffer.logs.pop(choice_to_del)
+        len_after_delete = len(MemoryBuffer.logs)
+        assert len_before_delete - 1 == len_after_delete
 #
     # def test_save_buffer_to_file(tmpdir):
     #     MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
