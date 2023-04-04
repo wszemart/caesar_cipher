@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, Union, Optional
 from cipher import Rot
 from buffer import MemoryBuffer
 from file_handler import FileHandler
@@ -18,22 +18,22 @@ class Manager:
             return text, rot_type
 
     @staticmethod
-    def encrypt_text():
+    def encrypt_text() -> None:
         text, rot_type = Manager.get_input()
-        encrypted_text = Rot.create_rot(rot_type).encrypt(text)
+        encrypted_text: Optional[str] = Rot.create_rot(rot_type).encrypt(text)
         print("Encrypted text:", encrypted_text)
         MemoryBuffer.create_log(encrypted_text, rot_type=rot_type, status="encrypted")
 
     @staticmethod
-    def decrypt_text():
+    def decrypt_text() -> None:
         text, rot_type = Manager.get_input()
-        decrypted_text = Rot.create_rot(rot_type).decrypt(text)
+        decrypted_text: Optional[str] = Rot.create_rot(rot_type).decrypt(text)
         print("Decrypted text:", decrypted_text)
         MemoryBuffer.create_log(decrypted_text, rot_type=rot_type, status="decrypted")
 
     @staticmethod
-    def read_file():
-        filename = input("Enter file name: ")
-        loaded_data = FileHandler.read_file(filename)
+    def read_file() -> None:
+        filename: str = input("Enter file name: ")
+        loaded_data: Union[list, dict] = FileHandler.read_file(filename)
         print(loaded_data)
         MemoryBuffer.logs = [Text(**txt_dict) for txt_dict in loaded_data]
