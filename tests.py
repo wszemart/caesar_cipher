@@ -28,15 +28,21 @@ class TestCipher:
         assert self.rot47.decrypt(text) == "Hello, World!"
 
 
-# class TestMemoryBuffer:
-#     @staticmethod
-#     def test_create_log():
-#         MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
-#         assert len(MemoryBuffer.logs) == 1
-#         assert isinstance(MemoryBuffer.logs[0], Text)
-#         assert MemoryBuffer.logs[0].text == "Sample text"
-#         assert MemoryBuffer.logs[0].rot_type == "rot13"
-#         assert MemoryBuffer.logs[0].status == "success"
+class TestMemoryBuffer:
+    @staticmethod
+    def test_create_log():
+        MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
+        assert len(MemoryBuffer.logs) == 1
+        assert isinstance(MemoryBuffer.logs[0], Text)
+        assert MemoryBuffer.logs[0].text == "Sample text"
+        assert MemoryBuffer.logs[0].rot_type == "rot13"
+        assert MemoryBuffer.logs[0].status == "success"
+
+    @staticmethod
+    def test_clear_buffer():
+        MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
+        MemoryBuffer.clear_buffer()
+        assert len(MemoryBuffer.logs) == 0
 #
 #     def test_show_buffer(capsys):
 #         MemoryBuffer.create_log(text="probe", rot_type="rot13", status="success")
@@ -44,20 +50,16 @@ class TestCipher:
 #         captured = capsys.readouterr()
 #         assert "0. Text(text='}!|or', rot_type='rot13', status='encrypted')" in captured.out
 #
-#     @staticmethod
-#     def test_clear_buffer():
-#         MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
-#         MemoryBuffer.clear_buffer()
-#         assert len(MemoryBuffer.logs) == 0
+
+
+    # def test_del_position(capsys):
+    #     MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
+    #     MemoryBuffer.del_position()
+    #     captured = capsys.readouterr()
+    #     assert "What do you want to delete?" in captured.out
 #
-#     def test_del_position(capsys):
-#         MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
-#         MemoryBuffer.del_position()
-#         captured = capsys.readouterr()
-#         assert "What do you want to delete?" in captured.out
-#
-#     def test_save_buffer_to_file(tmpdir):
-#         MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
-#         filepath = str(tmpdir.join("test_buffer.json"))
-#         MemoryBuffer.save_buffer_to_file(filepath)
-#         assert tmpdir.join("test_buffer.json").check()
+    # def test_save_buffer_to_file(tmpdir):
+    #     MemoryBuffer.create_log(text="Sample text", rot_type="rot13", status="success")
+    #     filepath = str(tmpdir.join("test_buffer.json"))
+    #     MemoryBuffer.save_buffer_to_file(filepath)
+    #     assert tmpdir.join("test_buffer.json").check()
