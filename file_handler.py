@@ -15,9 +15,9 @@ class FileHandler:
 
     @staticmethod
     def write_file(filename: str, data) -> None:
-        mode = input("Choose mode to write file (w/a): ")
+        mode: str = input("Choose mode to write file (w/a): ")
         if mode == "a":
-            current_data = FileHandler.read_file(filename)
+            current_data: Union[list, dict] = FileHandler.read_file(filename)
             current_data.append(data)
             data = current_data
 
