@@ -1,7 +1,11 @@
 # Caesar_cipher
 ### Simple app to decode and encode text by using Ceasar cipher. Created with Python.
-# Table of contest:
-## General info
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
+## [General info](#general-info)
 Aplikacja stworzona w celach ćwiczeniowych. Użytkownik obługuje aplikację z poziomu Menu.
 Do stworzenia Menu została użyta paczka consolemenu.
 Użytkownik ma możliwość:
@@ -11,7 +15,8 @@ Użytkownik ma możliwość:
 - jeżeli plik o podanej nazwie nie istnieje to utworzenie takiego
 - wczytania danych z pliku
 
-## Technologies and libraries:
+## [Technologies](#technologies)
+Project is created with:
 - Python
 - consolemenu
 - json
@@ -20,5 +25,5 @@ Użytkownik ma możliwość:
 - dataclasses
 - unitest
 - pytest
-## Setup
+## [Setup](#setup)
 ## Status
