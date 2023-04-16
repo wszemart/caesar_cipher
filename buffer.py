@@ -34,5 +34,5 @@ class MemoryBuffer:
 
     @staticmethod
     def save_buffer_to_file() -> None:
-        filename: str = input("Enter file name to save Memory Buffer: ")
+        filename: str = str(input("Enter file name to save Memory Buffer: "))
         FileHandler.write_file(filename, [asdict(txt) for txt in MemoryBuffer.logs])
