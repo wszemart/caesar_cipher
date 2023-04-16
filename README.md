@@ -33,11 +33,16 @@ Project is created with:
 ### [Setup](#setup)
 <details>
 <summary>Click here to see general information about <b>Setup</b>!</summary>
-Zapytać Stacha czy to wrzucać!
-Clone the repository
+<ul>
+To run this app:
+<li>Clone the repository</li>
+
 ```git clone https://github.com/wszemart/caesar_cipher```
-Install console-menu, pytest packages 
-In terminal go to directory with repository and run this command ``` python main.py ```
+<li>Install <i>console-menu</i> and <i>pytest</i> packages</li> 
+<li>In terminal go to directory with repository and run this command 
+
+``` python main.py ```</li>
+</ul>
 </details>
 
 ### [More detail about functionality](#more-detail-about-functionality)
