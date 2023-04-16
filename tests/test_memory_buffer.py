@@ -41,11 +41,11 @@ class TestMemoryBuffer:
                 log_data = [asdict(txt) for txt in MemoryBuffer.logs]
                 MemoryBuffer.save_buffer_to_file()
                 with open('test_file', 'r') as f:
-                    saved_data = json.loads(f.read())
+                    saved_data = f.read())
                     print(f'{saved_data} o tu są dane których nie zapisuje!')
                     assert saved_data == log_data
 
-        # with open('C:\\Users\\wszem\\Documents\\mentor\\caesar_cipher\\files\\test_file.json') as file:
+        # with open('caesar_cipher\\files\\test_file.json') as file:
         #     data = json.load(file)
         #
         # assert log_data == data
