@@ -14,12 +14,12 @@ class FileHandler:
             return []
 
     @staticmethod
-    def write_file(filename: str, data) -> None:
+    def write_file(filename: str, data, dir: str = "files/") -> None:
         mode: str = input("Choose mode to write file (w/a): ")
         if mode == "a":
             current_data: Union[list, dict] = FileHandler.read_file(filename)
             current_data.append(data)
             data = current_data
 
-        with open(f"files/{filename}.json", mode) as file:
+        with open(f"{dir}{filename}.json", mode) as file:
             json.dump(data, file, indent=2)
