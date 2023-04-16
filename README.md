@@ -34,6 +34,10 @@ Project is created with:
 <details>
 <summary>Click here to see general information about <b>Setup</b>!</summary>
 Zapytać Stacha czy to wrzucać!
+Clone the repository
+```git clone https://github.com/wszemart/caesar_cipher```
+Install console-menu, pytest packages 
+In terminal go to directory with repository and run this command ``` python main.py ```
 </details>
 
 ### [More detail about functionality](#more-detail-about-functionality)
