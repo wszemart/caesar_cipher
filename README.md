@@ -40,7 +40,7 @@ To run this app:
 
 ```git clone https://github.com/wszemart/caesar_cipher```
 <li>Install <i>console-menu</i> and <i>pytest</i> packages</li> 
-<li>In terminal go to directory with repository and run this command 
+<li>In the terminal go to directory with repository and run this command 
 
 ``` python main.py ```</li>
 </ul>
