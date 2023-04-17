@@ -20,13 +20,8 @@ The application was created for a practice purposes. In the project was used the
 Project is created with:
 <ul>
 <li>Python</li>
-<li>consolemenu</li>
-<li>abc</li>
-<li>typing</li>
-<li>dataclasses</li>
-<li>unitest</li>
 <li>pytest</li>
-<li>json</li>
+<li>unitest</li>
 </ul>
 </details>
 
