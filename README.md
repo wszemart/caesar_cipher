@@ -58,7 +58,6 @@ The application has the Menu and the Submenu. From the Menu level are supported 
 <li>exiting the application</li>
 </ul>
 While the program is running, the inserted and loaded data are stored in the list (Memory Buffer functionality). What allows after going to the Submenu to:
-
 <ul>
 <li>displaying the stored data (Show Buffer)</li>
 <li>memory cleaning (CLear Buffer)</li>
