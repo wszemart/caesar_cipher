@@ -10,7 +10,7 @@
 <details>
 <summary>Click here to see general information about <b>Project</b>!</summary>
 
-The application was created for a practice purposes. In the project was used the project patterns: Facade, FactoryMethod and AbstractFactory. The app functionality was tested by the pytest library. Style and compatibility with PEP8 rules was checked and corrected by the PEP8 Black library. The usage of the application was designed from the Menu level. The console-menu package was used to create the Menu.
+The application was created for practice purposes. There were 3 patterns used in  the project: Facade, FactoryMethod and AbstractFactory. The functionality of app was tested by the pytest library. Style and compatibility with PEP8 rules were checked and corrected by the PEP8 Black library. The usage of application was designed from the Menu level. The Menu was created by using the console-menu package. 
 </details>
 
 ### [Technologies](#technologies)
@@ -45,19 +45,19 @@ To run this app:
 <details>
 <summary>Click here to see general information about <b>Functionality</b>!</summary>
 
-The application has the Menu and the Submenu. From the Menu level are supported such functionalities as:
+The application consists of the Menu and the Submenu. Functionalities supported  from the Menu level:
 <ul>
 <li>choosing type of the action to execute (encrypt/decrypt)</li>
 <li>loading data from a file</li>
 <li>going to the Submenu (Memory Buffer Menu)</li>
-<li>exiting the application</li>
+<li>loging out of the application</li>
 </ul>
-While the program is running, the inserted and loaded data are stored in the list (Memory Buffer functionality). What allows after going to the Submenu to:
+While the program is running, the inserted and loaded data are stored in the list (Memory Buffer functionality). The Submenu as a secondary menu allows:
 <ul>
 <li>displaying the stored data (Show Buffer)</li>
 <li>memory cleaning (CLear Buffer)</li>
 <li>removing singular items from the memory (Delete position from Memory Buffer)</li>
 <li>saving data as a file in json form (Save Buffer to file)</li>
-<li>going back to the main Menu</li>
+<li>returning back to the main Menu</li>
 </ul>
 </details>
