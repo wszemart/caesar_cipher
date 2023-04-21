@@ -34,7 +34,9 @@ To run this app:
 <li>Clone the repository</li>
 
 ```git clone https://github.com/wszemart/caesar_cipher```
-<li>Install <i>console-menu</i> and <i>pytest</i> packages</li> 
+<li>In the terminal go to directory with repository and run this command 
+
+``` pip install -r requirements.txt ```</li>
 <li>In the terminal go to directory with repository and run this command 
 
 ``` python main.py ```</li>
@@ -55,7 +57,7 @@ The application consists of the Menu and the Submenu. Functionalities supported 
 While the program is running, the inserted and loaded data are stored in the list (Memory Buffer functionality). The Submenu as a secondary menu allows:
 <ul>
 <li>displaying the stored data (Show Buffer)</li>
-<li>memory cleaning (CLear Buffer)</li>
+<li>memory cleaning (Clear Buffer)</li>
 <li>removing singular items from the memory (Delete position from Memory Buffer)</li>
 <li>saving data as a file in json form (Save Buffer to file)</li>
 <li>returning back to the main Menu</li>
